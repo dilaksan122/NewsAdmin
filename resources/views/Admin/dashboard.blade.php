@@ -120,6 +120,15 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" y="12" r="1"/></svg>
         </button>
       </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <a href="{{ route('admin.logout') }}" class="logout-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="app-content">
       @yield('content')

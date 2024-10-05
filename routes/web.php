@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\AuthCoontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/',[AdminController::class,'dashboard']);
+Route::middleware(['admin_auth', 'prevent-back-history'])->group(function () {
+Route::get('/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');;
 Route::get('/cinema-news', [NewsController::class, 'cinema'])->name('cinema.news');
 Route::get('/sports-news', [NewsController::class, 'sports'])->name('sports.news');
 Route::get('/technology', [NewsController::class, 'technology'])->name('technology.news');
@@ -67,3 +68,12 @@ Route::get('/health/news', [NewsController::class, 'showHealth'])->name('Admin.H
 Route::get('/health/news/{id}/edit', [NewsController::class, 'editHealth'])->name('Admin.Health.editHealth');
 Route::put('/health/news/{id}', [NewsController::class, 'updateHealth'])->name('Admin.Health.updateHealth');
 Route::delete('/health/news/{id}', [NewsController::class, 'destroyHealth'])->name('Admin.Health.destroyHealth');
+
+
+Route::get('/admin/logout',[AuthCoontroller::class,'AdminLogout'])->name('admin.logout');
+});
+
+
+
+Route::get('/',[AuthCoontroller::class,'index'])->name('getLogin');
+ Route::post('/',[AuthCoontroller::class,'postlogin'])->name('postlogin');
