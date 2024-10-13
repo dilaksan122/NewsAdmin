@@ -29,7 +29,7 @@
                 @foreach($healthNews as $healthItem)
                 <tr>
                     <td>{{ $healthItem->id }}</td>
-                    <td>{{ $healthItem->title }}</td>
+                    <td>{{ $healthItem->name }}</td>
                     <td>{{ \Illuminate\Support\Str::limit($healthItem->content, 150) }}</td>
                     <td>{{ $healthItem->category }}</td>
                     <td>{{ $healthItem->author }}</td>

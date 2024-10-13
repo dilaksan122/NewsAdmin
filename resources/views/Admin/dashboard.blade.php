@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Products Dashboard UI</title>
+  <title>Admin Portal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
@@ -113,11 +113,11 @@
       </ul>
       <div class="account-info">
         <div class="account-info-picture">
-          <img src="https://images.unsplash.com/photo-1527736947477-2790e28f3443?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE2fHx3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Account">
+          <img src="{{asset('images/dilu.jpg')}}" alt="Account">
         </div>
         <div class="account-info-name">Sivabalan Dilaksan</div>
         <button class="account-info-more">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" y="12" r="1"/></svg>
+         
         </button>
       </div>
 

@@ -59,7 +59,7 @@
         </form>
     </div>
 
-    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('content');
         CKEDITOR.replace('slug');
